@@ -1,0 +1,657 @@
+# Logfile created on 2020-03-01 17:36:21 +0900 by logger.rb/66358
+D, [2020-03-01T17:36:21.718981 #7123] DEBUG -- : loggerに出力
+D, [2020-03-01T17:36:33.377948 #7139] DEBUG -- : loggerに出力
+D, [2020-03-01T18:08:34.462812 #7528] DEBUG -- : loggerに出力
+2020-03-01 18:08:40 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 18:08:40 +0900
+2020-03-01 18:08:40 +0900 :DEBUG:   [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 18:08:40 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 18:08:40 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 18:08:40 +0900 :DEBUG:   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:08:40 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:08:40 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 18:08:40 +0900 :DEBUG:   [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 ORDER BY "tasks"."created_at" DESC[0m  [["user_id", 8]]
+2020-03-01 18:08:40 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:26
+2020-03-01 18:08:40 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (83.6ms)
+2020-03-01 18:08:41 +0900 :INFO: Completed 200 OK in 681ms (Views: 606.7ms | ActiveRecord: 9.7ms)
+
+
+2020-03-01 18:08:44 +0900 :INFO: Started POST "/tasks/import" for ::1 at 2020-03-01 18:08:44 +0900
+2020-03-01 18:08:44 +0900 :INFO: Processing by TasksController#import as HTML
+2020-03-01 18:08:44 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uiVndg/dYfWRj3D+ZzrN5t11QBIKP0a2WLlOSzyRba6r08Qw/SVeMFEMgjcu8Xh2SGlTxPGXU+8PzMfmRhGrA==", "commit"=>"インポート"}
+2020-03-01 18:08:44 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:08:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:08:44 +0900 :INFO: Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+2020-03-01 18:08:44 +0900 :FATAL:   
+2020-03-01 18:08:44 +0900 :FATAL: NoMethodError (undefined method `path' for nil:NilClass):
+2020-03-01 18:08:44 +0900 :FATAL:   
+2020-03-01 18:08:44 +0900 :FATAL: app/models/task.rb:17:in `import'
+app/controllers/tasks_controller.rb:14:in `import'
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.9ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2020-03-01 18:08:44 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (84.7ms)
+2020-03-01 18:08:53 +0900 :INFO: Started POST "/tasks/import" for ::1 at 2020-03-01 18:08:53 +0900
+2020-03-01 18:08:53 +0900 :INFO: Processing by TasksController#import as HTML
+2020-03-01 18:08:53 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uiVndg/dYfWRj3D+ZzrN5t11QBIKP0a2WLlOSzyRba6r08Qw/SVeMFEMgjcu8Xh2SGlTxPGXU+8PzMfmRhGrA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fe8c44f7220 @tempfile=#<Tempfile:/var/folders/tn/kxm0pq2n7sb9gxxnl5mblm5h0000gn/T/RackMultipart20200301-7528-pa824.csv>, @original_filename="追加タスク.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"\xE8\xBF\xBD\xE5\x8A\xA0\xE3\x82\xBF\xE3\x82\xB9\xE3\x82\xAF.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"インポート"}
+2020-03-01 18:08:53 +0900 :DEBUG:   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:08:53 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:08:53 +0900 :INFO: Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.1ms)
+
+
+2020-03-01 18:08:53 +0900 :FATAL:   
+2020-03-01 18:08:53 +0900 :FATAL: CSV::MalformedCSVError (Invalid byte sequence in UTF-8 in line 2.):
+2020-03-01 18:08:53 +0900 :FATAL:   
+2020-03-01 18:08:53 +0900 :FATAL: app/models/task.rb:17:in `import'
+app/controllers/tasks_controller.rb:14:in `import'
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.2ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.9ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+2020-03-01 18:08:54 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (51.4ms)
+D, [2020-03-01T18:10:51.023841 #7575] DEBUG -- : loggerに出力
+2020-03-01 18:10:55 +0900 :INFO: Started POST "/tasks/import" for ::1 at 2020-03-01 18:10:55 +0900
+2020-03-01 18:10:55 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 18:10:55 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 18:10:55 +0900 :INFO: Processing by TasksController#import as HTML
+2020-03-01 18:10:55 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uiVndg/dYfWRj3D+ZzrN5t11QBIKP0a2WLlOSzyRba6r08Qw/SVeMFEMgjcu8Xh2SGlTxPGXU+8PzMfmRhGrA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fd21ec0c090 @tempfile=#<Tempfile:/var/folders/tn/kxm0pq2n7sb9gxxnl5mblm5h0000gn/T/RackMultipart20200301-7575-1wc4s5w.csv>, @original_filename="追加タスク.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"\xE8\xBF\xBD\xE5\x8A\xA0\xE3\x82\xBF\xE3\x82\xB9\xE3\x82\xAF.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"インポート"}
+2020-03-01 18:10:55 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:10:55 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:10:55 +0900 :INFO: Completed 500 Internal Server Error in 57ms (ActiveRecord: 6.7ms)
+
+
+2020-03-01 18:10:55 +0900 :FATAL:   
+2020-03-01 18:10:55 +0900 :FATAL: CSV::MalformedCSVError (Invalid byte sequence in UTF-8 in line 2.):
+2020-03-01 18:10:55 +0900 :FATAL:   
+2020-03-01 18:10:55 +0900 :FATAL: app/models/task.rb:17:in `import'
+app/controllers/tasks_controller.rb:14:in `import'
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.9ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.6ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+2020-03-01 18:10:55 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (64.4ms)
+D, [2020-03-01T18:19:34.959764 #7649] DEBUG -- : loggerに出力
+2020-03-01 18:19:41 +0900 :INFO: Started POST "/tasks/import" for ::1 at 2020-03-01 18:19:41 +0900
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 18:19:41 +0900 :INFO: Processing by TasksController#import as HTML
+2020-03-01 18:19:41 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uiVndg/dYfWRj3D+ZzrN5t11QBIKP0a2WLlOSzyRba6r08Qw/SVeMFEMgjcu8Xh2SGlTxPGXU+8PzMfmRhGrA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fadca287c68 @tempfile=#<Tempfile:/var/folders/tn/kxm0pq2n7sb9gxxnl5mblm5h0000gn/T/RackMultipart20200301-7649-983q66.csv>, @original_filename="追加タスク.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"\xE8\xBF\xBD\xE5\x8A\xA0\xE3\x82\xBF\xE3\x82\xB9\xE3\x82\xAF.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"インポート"}
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mTask Create (2.1ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "餃子を作る"], ["description", "160個作ります"], ["created_at", "2020-03-01 09:19:41.492857"], ["updated_at", "2020-03-01 09:19:41.492857"], ["user_id", 8]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "餃子を冷凍する"], ["description", "160個は食べきれないので冷凍する"], ["created_at", "2020-03-01 09:19:41.503202"], ["updated_at", "2020-03-01 09:19:41.503202"], ["user_id", 8]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/models/task.rb:20
+2020-03-01 18:19:41 +0900 :INFO: Redirected to http://localhost:3000/tasks
+2020-03-01 18:19:41 +0900 :INFO: Completed 302 Found in 134ms (ActiveRecord: 16.0ms)
+
+
+2020-03-01 18:19:41 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 18:19:41 +0900
+2020-03-01 18:19:41 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:19:41 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 18:19:41 +0900 :DEBUG:   [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 ORDER BY "tasks"."created_at" DESC[0m  [["user_id", 8]]
+2020-03-01 18:19:41 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:26
+2020-03-01 18:19:41 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (58.3ms)
+2020-03-01 18:19:42 +0900 :INFO: Completed 200 OK in 586ms (Views: 578.8ms | ActiveRecord: 0.9ms)
+
+
+2020-03-01 18:20:07 +0900 :INFO: Started GET "/tasks/16" for ::1 at 2020-03-01 18:20:07 +0900
+2020-03-01 18:20:07 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-01 18:20:07 +0900 :INFO:   Parameters: {"id"=>"16"}
+2020-03-01 18:20:07 +0900 :DEBUG:   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 18:20:07 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 18:20:07 +0900 :DEBUG:   [1m[36mTask Load (2.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 16], ["LIMIT", 1]]
+2020-03-01 18:20:07 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:73
+2020-03-01 18:20:07 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-01 18:20:07 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-01 18:20:07 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-01 18:20:07 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (57.4ms)
+2020-03-01 18:20:07 +0900 :INFO: Completed 200 OK in 114ms (Views: 99.5ms | ActiveRecord: 5.9ms)
+
+
+D, [2020-03-01T18:41:14.517051 #7791] DEBUG -- : loggerに出力
+D, [2020-03-01T19:05:19.274654 #7951] DEBUG -- : loggerに出力
+D, [2020-03-01T19:09:57.448065 #7990] DEBUG -- : loggerに出力
+D, [2020-03-01T19:12:40.456002 #8017] DEBUG -- : loggerに出力
+D, [2020-03-01T19:13:12.889756 #8034] DEBUG -- : loggerに出力
+D, [2020-03-01T19:29:34.879636 #8155] DEBUG -- : loggerに出力
+2020-03-01 19:29:37 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 19:29:37 +0900
+2020-03-01 19:29:37 +0900 :DEBUG:   [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 19:29:37 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 19:29:37 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 19:29:37 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:29:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:29:37 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 19:29:37 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 19:29:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 19:29:37 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 19:29:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 19:29:37 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 19:29:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:29
+2020-03-01 19:29:37 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (159.1ms)
+2020-03-01 19:29:38 +0900 :INFO: Completed 200 OK in 720ms (Views: 650.7ms | ActiveRecord: 10.3ms)
+
+
+2020-03-01 19:29:46 +0900 :INFO: Started GET "/admin/users" for ::1 at 2020-03-01 19:29:46 +0900
+2020-03-01 19:29:46 +0900 :INFO: Processing by Admin::UsersController#index as HTML
+2020-03-01 19:29:46 +0900 :DEBUG:   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:29:46 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:29:46 +0900 :INFO:   Rendering admin/users/index.html.slim within layouts/application
+2020-03-01 19:29:46 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+2020-03-01 19:29:46 +0900 :DEBUG:   ↳ app/views/admin/users/index.html.slim:16
+2020-03-01 19:29:46 +0900 :INFO:   Rendered admin/users/index.html.slim within layouts/application (14.4ms)
+2020-03-01 19:29:46 +0900 :INFO: Completed 200 OK in 60ms (Views: 50.9ms | ActiveRecord: 2.5ms)
+
+
+2020-03-01 19:30:15 +0900 :INFO: Started GET "/tasks/6" for ::1 at 2020-03-01 19:30:15 +0900
+2020-03-01 19:30:15 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-01 19:30:15 +0900 :INFO:   Parameters: {"id"=>"6"}
+2020-03-01 19:30:16 +0900 :DEBUG:   [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:30:16 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:30:16 +0900 :DEBUG:   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 6], ["LIMIT", 1]]
+2020-03-01 19:30:16 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:73
+2020-03-01 19:30:16 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-01 19:30:16 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-01 19:30:16 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-01 19:30:16 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (61.1ms)
+2020-03-01 19:30:16 +0900 :INFO: Completed 200 OK in 108ms (Views: 94.9ms | ActiveRecord: 7.1ms)
+
+
+D, [2020-03-01T19:31:16.103360 #8204] DEBUG -- : loggerに出力
+2020-03-01 19:31:17 +0900 :INFO: Started GET "/tasks/16" for ::1 at 2020-03-01 19:31:17 +0900
+2020-03-01 19:31:17 +0900 :DEBUG:   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 19:31:17 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 19:31:17 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-01 19:31:17 +0900 :INFO:   Parameters: {"id"=>"16"}
+2020-03-01 19:31:17 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:31:17 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:31:17 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 16], ["LIMIT", 1]]
+2020-03-01 19:31:17 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:73
+2020-03-01 19:31:17 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-01 19:31:17 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-01 19:31:17 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-01 19:31:17 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (99.4ms)
+2020-03-01 19:31:18 +0900 :INFO: Completed 200 OK in 602ms (Views: 533.8ms | ActiveRecord: 10.3ms)
+
+
+2020-03-01 19:31:37 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+2020-03-01 19:32:04 +0900 :DEBUG:   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+D, [2020-03-01T19:34:39.171789 #8243] DEBUG -- : loggerに出力
+2020-03-01 19:34:42 +0900 :INFO: Started GET "/tasks/16" for ::1 at 2020-03-01 19:34:42 +0900
+2020-03-01 19:34:42 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 19:34:42 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 19:34:42 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-01 19:34:42 +0900 :INFO:   Parameters: {"id"=>"16"}
+2020-03-01 19:34:42 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:34:42 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:34:42 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 16], ["LIMIT", 1]]
+2020-03-01 19:34:42 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:73
+2020-03-01 19:34:42 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-01 19:34:42 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-01 19:34:42 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-01 19:34:42 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (101.9ms)
+2020-03-01 19:34:42 +0900 :INFO: Completed 200 OK in 681ms (Views: 595.7ms | ActiveRecord: 11.6ms)
+
+
+2020-03-01 19:34:44 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 19:34:44 +0900
+2020-03-01 19:34:44 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 19:34:44 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 19:34:44 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 19:34:44 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 19:34:44 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 19:34:44 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 19:34:44 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 19:34:44 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 19:34:44 +0900 :DEBUG:   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 19:34:44 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:29
+2020-03-01 19:34:44 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (33.7ms)
+2020-03-01 19:34:44 +0900 :INFO: Completed 200 OK in 72ms (Views: 63.6ms | ActiveRecord: 1.6ms)
+
+
+D, [2020-03-01T19:35:44.209499 #8272] DEBUG -- : loggerに出力
+D, [2020-03-01T23:02:49.683851 #8443] DEBUG -- : loggerに出力
+D, [2020-03-01T23:03:21.774424 #8462] DEBUG -- : loggerに出力
+D, [2020-03-01T23:03:54.073955 #8479] DEBUG -- : loggerに出力
+D, [2020-03-01T23:04:03.075072 #8495] DEBUG -- : loggerに出力
+2020-03-01 23:04:07 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 23:04:07 +0900
+2020-03-01 23:04:07 +0900 :DEBUG:   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 23:04:07 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 23:04:07 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 23:04:07 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 23:04:07 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 23:04:07 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 23:04:07 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 23:04:07 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 23:04:07 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:04:07 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:04:07 +0900 :DEBUG:   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:04:07 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:29
+2020-03-01 23:04:07 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (95.8ms)
+2020-03-01 23:04:07 +0900 :INFO: Completed 200 OK in 608ms (Views: 537.6ms | ActiveRecord: 10.3ms)
+
+
+D, [2020-03-01T23:04:55.860539 #8519] DEBUG -- : loggerに出力
+2020-03-01 23:07:53 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask0"], ["created_at", "2020-03-01 14:08:54.067023"], ["updated_at", "2020-03-01 14:08:54.067023"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask1"], ["created_at", "2020-03-01 14:08:54.073953"], ["updated_at", "2020-03-01 14:08:54.073953"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask2"], ["created_at", "2020-03-01 14:08:54.078216"], ["updated_at", "2020-03-01 14:08:54.078216"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask3"], ["created_at", "2020-03-01 14:08:54.081764"], ["updated_at", "2020-03-01 14:08:54.081764"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask4"], ["created_at", "2020-03-01 14:08:54.085149"], ["updated_at", "2020-03-01 14:08:54.085149"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask5"], ["created_at", "2020-03-01 14:08:54.088696"], ["updated_at", "2020-03-01 14:08:54.088696"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask6"], ["created_at", "2020-03-01 14:08:54.092013"], ["updated_at", "2020-03-01 14:08:54.092013"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask7"], ["created_at", "2020-03-01 14:08:54.095702"], ["updated_at", "2020-03-01 14:08:54.095702"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask8"], ["created_at", "2020-03-01 14:08:54.099777"], ["updated_at", "2020-03-01 14:08:54.099777"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask9"], ["created_at", "2020-03-01 14:08:54.103209"], ["updated_at", "2020-03-01 14:08:54.103209"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask10"], ["created_at", "2020-03-01 14:08:54.106838"], ["updated_at", "2020-03-01 14:08:54.106838"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask11"], ["created_at", "2020-03-01 14:08:54.110168"], ["updated_at", "2020-03-01 14:08:54.110168"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask12"], ["created_at", "2020-03-01 14:08:54.113586"], ["updated_at", "2020-03-01 14:08:54.113586"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask13"], ["created_at", "2020-03-01 14:08:54.117354"], ["updated_at", "2020-03-01 14:08:54.117354"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask14"], ["created_at", "2020-03-01 14:08:54.120771"], ["updated_at", "2020-03-01 14:08:54.120771"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask15"], ["created_at", "2020-03-01 14:08:54.124703"], ["updated_at", "2020-03-01 14:08:54.124703"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask16"], ["created_at", "2020-03-01 14:08:54.128000"], ["updated_at", "2020-03-01 14:08:54.128000"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask17"], ["created_at", "2020-03-01 14:08:54.131435"], ["updated_at", "2020-03-01 14:08:54.131435"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask18"], ["created_at", "2020-03-01 14:08:54.135025"], ["updated_at", "2020-03-01 14:08:54.135025"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask19"], ["created_at", "2020-03-01 14:08:54.138920"], ["updated_at", "2020-03-01 14:08:54.138920"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask20"], ["created_at", "2020-03-01 14:08:54.142492"], ["updated_at", "2020-03-01 14:08:54.142492"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask21"], ["created_at", "2020-03-01 14:08:54.146005"], ["updated_at", "2020-03-01 14:08:54.146005"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask22"], ["created_at", "2020-03-01 14:08:54.149552"], ["updated_at", "2020-03-01 14:08:54.149552"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask23"], ["created_at", "2020-03-01 14:08:54.152730"], ["updated_at", "2020-03-01 14:08:54.152730"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask24"], ["created_at", "2020-03-01 14:08:54.156603"], ["updated_at", "2020-03-01 14:08:54.156603"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask25"], ["created_at", "2020-03-01 14:08:54.159573"], ["updated_at", "2020-03-01 14:08:54.159573"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask26"], ["created_at", "2020-03-01 14:08:54.162960"], ["updated_at", "2020-03-01 14:08:54.162960"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask27"], ["created_at", "2020-03-01 14:08:54.166407"], ["updated_at", "2020-03-01 14:08:54.166407"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask28"], ["created_at", "2020-03-01 14:08:54.169943"], ["updated_at", "2020-03-01 14:08:54.169943"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask29"], ["created_at", "2020-03-01 14:08:54.173390"], ["updated_at", "2020-03-01 14:08:54.173390"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask30"], ["created_at", "2020-03-01 14:08:54.176992"], ["updated_at", "2020-03-01 14:08:54.176992"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask31"], ["created_at", "2020-03-01 14:08:54.180678"], ["updated_at", "2020-03-01 14:08:54.180678"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask32"], ["created_at", "2020-03-01 14:08:54.184289"], ["updated_at", "2020-03-01 14:08:54.184289"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask33"], ["created_at", "2020-03-01 14:08:54.187960"], ["updated_at", "2020-03-01 14:08:54.187960"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask34"], ["created_at", "2020-03-01 14:08:54.191402"], ["updated_at", "2020-03-01 14:08:54.191402"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask35"], ["created_at", "2020-03-01 14:08:54.194766"], ["updated_at", "2020-03-01 14:08:54.194766"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask36"], ["created_at", "2020-03-01 14:08:54.198216"], ["updated_at", "2020-03-01 14:08:54.198216"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask37"], ["created_at", "2020-03-01 14:08:54.201656"], ["updated_at", "2020-03-01 14:08:54.201656"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask38"], ["created_at", "2020-03-01 14:08:54.204469"], ["updated_at", "2020-03-01 14:08:54.204469"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask39"], ["created_at", "2020-03-01 14:08:54.207759"], ["updated_at", "2020-03-01 14:08:54.207759"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask40"], ["created_at", "2020-03-01 14:08:54.211226"], ["updated_at", "2020-03-01 14:08:54.211226"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask41"], ["created_at", "2020-03-01 14:08:54.214651"], ["updated_at", "2020-03-01 14:08:54.214651"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask42"], ["created_at", "2020-03-01 14:08:54.218452"], ["updated_at", "2020-03-01 14:08:54.218452"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask43"], ["created_at", "2020-03-01 14:08:54.221673"], ["updated_at", "2020-03-01 14:08:54.221673"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask44"], ["created_at", "2020-03-01 14:08:54.224671"], ["updated_at", "2020-03-01 14:08:54.224671"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask45"], ["created_at", "2020-03-01 14:08:54.227915"], ["updated_at", "2020-03-01 14:08:54.227915"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask46"], ["created_at", "2020-03-01 14:08:54.231267"], ["updated_at", "2020-03-01 14:08:54.231267"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask47"], ["created_at", "2020-03-01 14:08:54.234423"], ["updated_at", "2020-03-01 14:08:54.234423"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask48"], ["created_at", "2020-03-01 14:08:54.238183"], ["updated_at", "2020-03-01 14:08:54.238183"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask49"], ["created_at", "2020-03-01 14:08:54.241537"], ["updated_at", "2020-03-01 14:08:54.241537"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask50"], ["created_at", "2020-03-01 14:08:54.244977"], ["updated_at", "2020-03-01 14:08:54.244977"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask51"], ["created_at", "2020-03-01 14:08:54.248532"], ["updated_at", "2020-03-01 14:08:54.248532"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask52"], ["created_at", "2020-03-01 14:08:54.251980"], ["updated_at", "2020-03-01 14:08:54.251980"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask53"], ["created_at", "2020-03-01 14:08:54.256345"], ["updated_at", "2020-03-01 14:08:54.256345"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask54"], ["created_at", "2020-03-01 14:08:54.259887"], ["updated_at", "2020-03-01 14:08:54.259887"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask55"], ["created_at", "2020-03-01 14:08:54.263165"], ["updated_at", "2020-03-01 14:08:54.263165"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask56"], ["created_at", "2020-03-01 14:08:54.266651"], ["updated_at", "2020-03-01 14:08:54.266651"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask57"], ["created_at", "2020-03-01 14:08:54.270210"], ["updated_at", "2020-03-01 14:08:54.270210"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask58"], ["created_at", "2020-03-01 14:08:54.273976"], ["updated_at", "2020-03-01 14:08:54.273976"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask59"], ["created_at", "2020-03-01 14:08:54.277286"], ["updated_at", "2020-03-01 14:08:54.277286"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask60"], ["created_at", "2020-03-01 14:08:54.280597"], ["updated_at", "2020-03-01 14:08:54.280597"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask61"], ["created_at", "2020-03-01 14:08:54.284098"], ["updated_at", "2020-03-01 14:08:54.284098"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask62"], ["created_at", "2020-03-01 14:08:54.287480"], ["updated_at", "2020-03-01 14:08:54.287480"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask63"], ["created_at", "2020-03-01 14:08:54.290830"], ["updated_at", "2020-03-01 14:08:54.290830"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask64"], ["created_at", "2020-03-01 14:08:54.294819"], ["updated_at", "2020-03-01 14:08:54.294819"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask65"], ["created_at", "2020-03-01 14:08:54.298390"], ["updated_at", "2020-03-01 14:08:54.298390"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask66"], ["created_at", "2020-03-01 14:08:54.301971"], ["updated_at", "2020-03-01 14:08:54.301971"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask67"], ["created_at", "2020-03-01 14:08:54.305184"], ["updated_at", "2020-03-01 14:08:54.305184"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask68"], ["created_at", "2020-03-01 14:08:54.308647"], ["updated_at", "2020-03-01 14:08:54.308647"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask69"], ["created_at", "2020-03-01 14:08:54.312187"], ["updated_at", "2020-03-01 14:08:54.312187"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask70"], ["created_at", "2020-03-01 14:08:54.315612"], ["updated_at", "2020-03-01 14:08:54.315612"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask71"], ["created_at", "2020-03-01 14:08:54.318782"], ["updated_at", "2020-03-01 14:08:54.318782"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask72"], ["created_at", "2020-03-01 14:08:54.322386"], ["updated_at", "2020-03-01 14:08:54.322386"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask73"], ["created_at", "2020-03-01 14:08:54.325815"], ["updated_at", "2020-03-01 14:08:54.325815"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask74"], ["created_at", "2020-03-01 14:08:54.329333"], ["updated_at", "2020-03-01 14:08:54.329333"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask75"], ["created_at", "2020-03-01 14:08:54.332774"], ["updated_at", "2020-03-01 14:08:54.332774"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask76"], ["created_at", "2020-03-01 14:08:54.336793"], ["updated_at", "2020-03-01 14:08:54.336793"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask77"], ["created_at", "2020-03-01 14:08:54.340231"], ["updated_at", "2020-03-01 14:08:54.340231"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask78"], ["created_at", "2020-03-01 14:08:54.343431"], ["updated_at", "2020-03-01 14:08:54.343431"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask79"], ["created_at", "2020-03-01 14:08:54.346690"], ["updated_at", "2020-03-01 14:08:54.346690"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask80"], ["created_at", "2020-03-01 14:08:54.350201"], ["updated_at", "2020-03-01 14:08:54.350201"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (3.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask81"], ["created_at", "2020-03-01 14:08:54.353831"], ["updated_at", "2020-03-01 14:08:54.353831"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask82"], ["created_at", "2020-03-01 14:08:54.360790"], ["updated_at", "2020-03-01 14:08:54.360790"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask83"], ["created_at", "2020-03-01 14:08:54.364168"], ["updated_at", "2020-03-01 14:08:54.364168"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask84"], ["created_at", "2020-03-01 14:08:54.367881"], ["updated_at", "2020-03-01 14:08:54.367881"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask85"], ["created_at", "2020-03-01 14:08:54.371044"], ["updated_at", "2020-03-01 14:08:54.371044"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask86"], ["created_at", "2020-03-01 14:08:54.375062"], ["updated_at", "2020-03-01 14:08:54.375062"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask87"], ["created_at", "2020-03-01 14:08:54.378589"], ["updated_at", "2020-03-01 14:08:54.378589"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask88"], ["created_at", "2020-03-01 14:08:54.381929"], ["updated_at", "2020-03-01 14:08:54.381929"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask89"], ["created_at", "2020-03-01 14:08:54.385244"], ["updated_at", "2020-03-01 14:08:54.385244"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask90"], ["created_at", "2020-03-01 14:08:54.388838"], ["updated_at", "2020-03-01 14:08:54.388838"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask91"], ["created_at", "2020-03-01 14:08:54.392080"], ["updated_at", "2020-03-01 14:08:54.392080"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask92"], ["created_at", "2020-03-01 14:08:54.395324"], ["updated_at", "2020-03-01 14:08:54.395324"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask93"], ["created_at", "2020-03-01 14:08:54.398647"], ["updated_at", "2020-03-01 14:08:54.398647"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask94"], ["created_at", "2020-03-01 14:08:54.402654"], ["updated_at", "2020-03-01 14:08:54.402654"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask95"], ["created_at", "2020-03-01 14:08:54.406406"], ["updated_at", "2020-03-01 14:08:54.406406"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask96"], ["created_at", "2020-03-01 14:08:54.409900"], ["updated_at", "2020-03-01 14:08:54.409900"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask97"], ["created_at", "2020-03-01 14:08:54.414018"], ["updated_at", "2020-03-01 14:08:54.414018"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask98"], ["created_at", "2020-03-01 14:08:54.417521"], ["updated_at", "2020-03-01 14:08:54.417521"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SampleTask99"], ["created_at", "2020-03-01 14:08:54.420920"], ["updated_at", "2020-03-01 14:08:54.420920"], ["user_id", 8]]
+2020-03-01 23:08:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-01T23:09:21.493594 #8569] DEBUG -- : loggerに出力
+2020-03-01 23:09:27 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-01 23:09:27 +0900
+2020-03-01 23:09:27 +0900 :DEBUG:   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 23:09:27 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 23:09:27 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 23:09:27 +0900 :DEBUG:   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 23:09:27 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 23:09:27 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 23:09:27 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 23:09:27 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 23:09:28 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:09:28 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:09:28 +0900 :DEBUG:   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:09:28 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:09:28 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (155.1ms)
+2020-03-01 23:09:28 +0900 :INFO: Completed 200 OK in 717ms (Views: 653.5ms | ActiveRecord: 11.6ms)
+
+
+D, [2020-03-01T23:10:04.157786 #8594] DEBUG -- : loggerに出力
+2020-03-01 23:10:06 +0900 :INFO: Started GET "/?page=5" for ::1 at 2020-03-01 23:10:06 +0900
+2020-03-01 23:10:06 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-01 23:10:06 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-01 23:10:06 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 23:10:06 +0900 :INFO:   Parameters: {"page"=>"5"}
+2020-03-01 23:10:06 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 23:10:06 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 23:10:06 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 23:10:06 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 23:10:06 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 23:10:07 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 100]]
+2020-03-01 23:10:07 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:10:07 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 100]]
+2020-03-01 23:10:07 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:10:07 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (153.4ms)
+2020-03-01 23:10:07 +0900 :INFO: Completed 200 OK in 693ms (Views: 627.1ms | ActiveRecord: 10.2ms)
+
+
+2020-03-01 23:10:15 +0900 :INFO: Started GET "/" for ::1 at 2020-03-01 23:10:15 +0900
+2020-03-01 23:10:15 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-01 23:10:15 +0900 :DEBUG:   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-01 23:10:15 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-01 23:10:15 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-01 23:10:15 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-01 23:10:15 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-01 23:10:15 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:10:15 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:10:15 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-01 23:10:15 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-01 23:10:15 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (38.4ms)
+2020-03-01 23:10:15 +0900 :INFO: Completed 200 OK in 79ms (Views: 71.2ms | ActiveRecord: 2.2ms)
+
+
+D, [2020-03-01T23:12:22.479963 #8632] DEBUG -- : loggerに出力

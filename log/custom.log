@@ -1,0 +1,11 @@
+# Logfile created on 2020-05-24 21:26:53 +0900 by logger.rb/66358
+D, [2020-05-24T21:26:53.757404 #4831] DEBUG -- : custom_loggerに出力
+D, [2020-05-24T21:47:52.185205 #5140] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T08:33:33.830221 #646] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T08:44:12.415175 #882] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:32:02.321021 #793] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:36:45.026066 #888] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:36:49.224665 #910] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:38:40.520901 #955] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:55:40.214099 #1151] DEBUG -- : custom_loggerに出力
+D, [2020-05-28T11:58:28.596223 #1202] DEBUG -- : custom_loggerに出力

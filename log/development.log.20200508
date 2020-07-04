@@ -1,0 +1,35 @@
+# Logfile created on 2020-03-23 08:47:16 +0900 by logger.rb/66358
+D, [2020-03-23T08:47:16.796576 #85416] DEBUG -- : loggerに出力
+2020-03-23 08:47:23 +0900 :INFO: Started GET "/tasks/119" for ::1 at 2020-03-23 08:47:23 +0900
+2020-03-23 08:47:23 +0900 :DEBUG:   [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-23 08:47:23 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-23 08:47:23 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-23 08:47:23 +0900 :INFO:   Parameters: {"id"=>"119"}
+2020-03-23 08:47:23 +0900 :DEBUG:   [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-23 08:47:23 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-23 08:47:24 +0900 :DEBUG:   [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 119], ["LIMIT", 1]]
+2020-03-23 08:47:24 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-23 08:47:24 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-23 08:47:24 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 119], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-23 08:47:24 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-23 08:47:24 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (78.1ms)
+2020-03-23 08:47:24 +0900 :INFO: Completed 200 OK in 881ms (Views: 762.4ms | ActiveRecord: 21.3ms)
+
+
+2020-03-23 08:47:24 +0900 :INFO: Started GET "/assets/application.self-04ea936fdc3e7289f231f07c558146ed5afb3ae7830f5fcf2f7cadcfebc41a2c.css?body=1" for ::1 at 2020-03-23 08:47:24 +0900
+2020-03-23 08:47:24 +0900 :INFO: Started GET "/assets/tasks.self-37ba8e48a7f4c289f014906dc107dcfd4dc68119bba6911682e8546ac691225e.js?body=1" for ::1 at 2020-03-23 08:47:24 +0900
+2020-03-23 08:47:37 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-23 08:47:37 +0900
+2020-03-23 08:47:37 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-23 08:47:37 +0900 :DEBUG:   [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-23 08:47:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-23 08:47:37 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-23 08:47:37 +0900 :DEBUG:   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-23 08:47:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-23 08:47:38 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-23 08:47:38 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-23 08:47:38 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-23 08:47:38 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-23 08:47:38 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (55.8ms)
+2020-03-23 08:47:38 +0900 :INFO: Completed 200 OK in 96ms (Views: 81.0ms | ActiveRecord: 7.0ms)
+
+

@@ -1,0 +1,173 @@
+# Logfile created on 2020-05-09 15:50:36 +0900 by logger.rb/66358
+D, [2020-05-09T15:50:36.086511 #67255] DEBUG -- : loggerに出力
+2020-05-09 15:50:47 +0900 :INFO: Started GET "/" for ::1 at 2020-05-09 15:50:47 +0900
+2020-05-09 15:50:47 +0900 :DEBUG:   [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-05-09 15:50:47 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-05-09 15:50:47 +0900 :INFO: Processing by TasksController#index as HTML
+2020-05-09 15:50:47 +0900 :INFO: Redirected to http://localhost:3000/login
+2020-05-09 15:50:47 +0900 :INFO: Filter chain halted as :login_required rendered or redirected
+2020-05-09 15:50:47 +0900 :INFO: Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+2020-05-09 15:50:47 +0900 :INFO: Started GET "/login" for ::1 at 2020-05-09 15:50:47 +0900
+2020-05-09 15:50:47 +0900 :INFO: Processing by SessionsController#new as HTML
+2020-05-09 15:50:47 +0900 :INFO:   Rendering sessions/new.html.slim within layouts/application
+2020-05-09 15:50:47 +0900 :INFO:   Rendered sessions/new.html.slim within layouts/application (53.4ms)
+2020-05-09 15:50:51 +0900 :INFO: Completed 500 Internal Server Error in 3564ms (ActiveRecord: 0.0ms)
+
+
+2020-05-09 15:50:51 +0900 :FATAL:   
+2020-05-09 15:50:51 +0900 :FATAL: ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007facb638bb10>:0x00007facb6391768>
+Did you mean?  javascript_path
+               javascript_tag):
+2020-05-09 15:50:51 +0900 :FATAL:     24:         .alert.alert-success= flash.notice
+    25:     = yield
+    26: 
+    27:     = javascript_pack_tag 'application'
+2020-05-09 15:50:51 +0900 :FATAL:   
+2020-05-09 15:50:51 +0900 :FATAL: app/views/layouts/application.html.slim:27:in `_app_views_layouts_application_html_slim___609276577563665476_70189876807000'
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.3ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.5ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+2020-05-09 15:50:51 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (120.3ms)
+D, [2020-05-09T15:51:10.320844 #67320] DEBUG -- : loggerに出力
+2020-05-09 15:51:13 +0900 :INFO: Started GET "/login" for ::1 at 2020-05-09 15:51:13 +0900
+2020-05-09 15:51:13 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-05-09 15:51:13 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-05-09 15:51:13 +0900 :INFO: Processing by SessionsController#new as HTML
+2020-05-09 15:51:13 +0900 :INFO:   Rendering sessions/new.html.slim within layouts/application
+2020-05-09 15:51:13 +0900 :INFO:   Rendered sessions/new.html.slim within layouts/application (11.6ms)
+2020-05-09 15:51:14 +0900 :INFO: Completed 500 Internal Server Error in 716ms (ActiveRecord: 0.0ms)
+
+
+2020-05-09 15:51:14 +0900 :FATAL:   
+2020-05-09 15:51:14 +0900 :FATAL: ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007fcc21029000>:0x00007fcc2103cc90>
+Did you mean?  javascript_path
+               javascript_tag):
+2020-05-09 15:51:14 +0900 :FATAL:     24:         .alert.alert-success= flash.notice
+    25:     = yield
+    26: 
+    27: = javascript_pack_tag 'application'
+2020-05-09 15:51:14 +0900 :FATAL:   
+2020-05-09 15:51:14 +0900 :FATAL: app/views/layouts/application.html.slim:27:in `_app_views_layouts_application_html_slim__2747963022610946925_70257351990380'
+2020-05-09 15:51:14 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+2020-05-09 15:51:14 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+2020-05-09 15:51:14 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+2020-05-09 15:51:14 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+2020-05-09 15:51:14 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+2020-05-09 15:51:14 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+2020-05-09 15:51:14 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+2020-05-09 15:51:14 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.3ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.6ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendering vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+2020-05-09 15:51:15 +0900 :INFO:   Rendered vendor/bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/templates/index.html.erb (100.7ms)
+D, [2020-05-09T16:04:26.295339 #67402] DEBUG -- : loggerに出力
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/login" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :DEBUG:   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-05-09 16:04:34 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-05-09 16:04:34 +0900 :INFO: Processing by SessionsController#new as HTML
+2020-05-09 16:04:34 +0900 :INFO:   Rendering sessions/new.html.slim within layouts/application
+2020-05-09 16:04:34 +0900 :INFO:   Rendered sessions/new.html.slim within layouts/application (10.3ms)
+2020-05-09 16:04:34 +0900 :INFO: Completed 200 OK in 500ms (Views: 491.7ms | ActiveRecord: 0.0ms)
+
+
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/activestorage.self-1ed4604ac2170045f1ffca4edb81a75246661555e4f9cf682bb8a21825e32e1c.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/admin/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/application.self-04ea936fdc3e7289f231f07c558146ed5afb3ae7830f5fcf2f7cadcfebc41a2c.css?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/tasks.self-0750aa0c0428d7d3ea4b477fc0358628edcda8b04eb4590d84103e907795ef06.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:34 +0900 :INFO: Started GET "/assets/application.self-12be097b9a2442b0b6cdcb5146d1d63c00abcde3675ff34d1de6126cb13e6714.js?body=1" for ::1 at 2020-05-09 16:04:34 +0900
+2020-05-09 16:04:35 +0900 :INFO: Started GET "/assets/rails-ujs.self-43e81c501e7e36871a34b4b950451cc7cb047af4e846ec742539e64724582452.js?body=1" for ::1 at 2020-05-09 16:04:35 +0900
+2020-05-09 16:04:36 +0900 :INFO: Started POST "/login" for ::1 at 2020-05-09 16:04:36 +0900
+2020-05-09 16:04:36 +0900 :INFO: Processing by SessionsController#create as HTML
+2020-05-09 16:04:36 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"MVTySTpktrbkjGSxtdjo/95kfcIWxL8W3sB9afhDUTu46iuIHw10QblzByjzV54kTK1qG0MoqOuC7wDIRuILzQ==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]"}, "commit"=>"ログインする"}
+2020-05-09 16:04:37 +0900 :DEBUG:   [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+2020-05-09 16:04:37 +0900 :DEBUG:   ↳ app/controllers/sessions_controller.rb:7
+2020-05-09 16:04:37 +0900 :INFO: Redirected to http://localhost:3000/
+2020-05-09 16:04:37 +0900 :INFO: Completed 302 Found in 358ms (ActiveRecord: 40.6ms)
+
+
+2020-05-09 16:04:37 +0900 :INFO: Started GET "/" for ::1 at 2020-05-09 16:04:37 +0900
+2020-05-09 16:04:37 +0900 :INFO: Processing by TasksController#index as HTML
+2020-05-09 16:04:37 +0900 :DEBUG:   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-05-09 16:04:37 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-05-09 16:04:37 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-05-09 16:04:37 +0900 :DEBUG:   [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-05-09 16:04:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-05-09 16:04:37 +0900 :DEBUG:   [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-05-09 16:04:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-05-09 16:04:37 +0900 :DEBUG:   [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-05-09 16:04:37 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-05-09 16:04:37 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (269.9ms)
+2020-05-09 16:04:37 +0900 :INFO: Completed 200 OK in 377ms (Views: 308.3ms | ActiveRecord: 12.2ms)
+
+
+D, [2020-05-09T16:09:34.083394 #67521] DEBUG -- : loggerに出力
+D, [2020-05-09T16:13:48.164460 #68158] DEBUG -- : loggerに出力
+2020-05-09 16:13:54 +0900 :INFO: Started GET "/" for ::1 at 2020-05-09 16:13:54 +0900
+2020-05-09 16:13:54 +0900 :DEBUG:   [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-05-09 16:13:54 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-05-09 16:13:54 +0900 :INFO: Processing by TasksController#index as HTML
+2020-05-09 16:13:54 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-05-09 16:13:54 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-05-09 16:13:54 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-05-09 16:13:54 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-05-09 16:13:54 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-05-09 16:13:54 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-05-09 16:13:54 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-05-09 16:13:54 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-05-09 16:13:54 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-05-09 16:13:54 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (162.8ms)
+2020-05-09 16:13:57 +0900 :INFO: [Webpacker] Compiling...
+2020-05-09 16:14:04 +0900 :INFO: [Webpacker] Compiled all packs in /Users/matsumotokaishi/taskleaf/public/packs
+2020-05-09 16:14:04 +0900 :INFO: [Webpacker] Hash: c28a9dd27935d4908911
+Version: webpack 4.43.0
+Time: 5225ms
+Built at: 2020/05/09 16:14:04
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-da2e5a111de2a43ad30f.js   1.02 MiB  application  [emitted] [immutable]  application
+js/application-da2e5a111de2a43ad30f.js.map   1.18 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-da2e5a111de2a43ad30f.js js/application-da2e5a111de2a43ad30f.js.map
+[./app/javascript/packs/application.js] 67 bytes {application} [built]
+[./app/javascript/taskleaf/hello.js] 251 bytes {application} [built]
+    + 11 hidden modules
+
+2020-05-09 16:14:04 +0900 :INFO: Completed 200 OK in 10050ms (Views: 9967.2ms | ActiveRecord: 12.4ms)
+
+

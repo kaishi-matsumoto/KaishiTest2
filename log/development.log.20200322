@@ -1,0 +1,1077 @@
+# Logfile created on 2020-03-02 07:59:12 +0900 by logger.rb/66358
+2020-03-02 07:59:12 +0900 :WARN: DEPRECATION WARNING: The -e option is deprecated and will be removed in the near future. Please use the html2slim gem or the html2haml gem to convert erb templates manually. (called from <main> at /Users/matsumotokaishi/taskleaf/bin/rails:9)
+D, [2020-03-02T07:59:35.049050 #9358] DEBUG -- : loggerに出力
+2020-03-02 07:59:40 +0900 :INFO: Started GET "/" for ::1 at 2020-03-02 07:59:40 +0900
+2020-03-02 07:59:40 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-02 07:59:40 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-02 07:59:40 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-02 07:59:40 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 07:59:40 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 07:59:40 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-02 07:59:40 +0900 :DEBUG:   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-02 07:59:40 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-02 07:59:40 +0900 :DEBUG:   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 07:59:40 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 07:59:40 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 07:59:40 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 07:59:40 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (175.5ms)
+2020-03-02 07:59:41 +0900 :INFO: Completed 200 OK in 733ms (Views: 660.6ms | ActiveRecord: 13.0ms)
+
+
+2020-03-02 07:59:41 +0900 :INFO: Started GET "/assets/application.self-04ea936fdc3e7289f231f07c558146ed5afb3ae7830f5fcf2f7cadcfebc41a2c.css?body=1" for ::1 at 2020-03-02 07:59:41 +0900
+D, [2020-03-02T08:12:49.352263 #46408] DEBUG -- : loggerに出力
+D, [2020-03-02T08:13:18.212309 #46435] DEBUG -- : loggerに出力
+D, [2020-03-02T08:15:41.624088 #46468] DEBUG -- : loggerに出力
+D, [2020-03-02T08:15:48.465739 #46473] DEBUG -- : loggerに出力
+D, [2020-03-02T08:16:37.592415 #46487] DEBUG -- : loggerに出力
+D, [2020-03-02T08:16:40.429944 #46501] DEBUG -- : loggerに出力
+D, [2020-03-02T08:30:12.443670 #46605] DEBUG -- : loggerに出力
+2020-03-02 08:30:18 +0900 :INFO: Started GET "/tasks/new" for ::1 at 2020-03-02 08:30:18 +0900
+2020-03-02 08:30:19 +0900 :DEBUG:   [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-02 08:30:19 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-02 08:30:19 +0900 :INFO: Processing by TasksController#new as HTML
+2020-03-02 08:30:19 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:30:19 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:30:19 +0900 :INFO:   Rendering tasks/new.html.slim within layouts/application
+2020-03-02 08:30:19 +0900 :INFO:   Rendered tasks/_form.html.slim (49.0ms)
+2020-03-02 08:30:19 +0900 :INFO:   Rendered tasks/new.html.slim within layouts/application (64.8ms)
+2020-03-02 08:30:19 +0900 :INFO: Completed 200 OK in 765ms (Views: 680.1ms | ActiveRecord: 10.1ms)
+
+
+2020-03-02 08:30:41 +0900 :INFO: Started POST "/tasks" for ::1 at 2020-03-02 08:30:41 +0900
+2020-03-02 08:30:41 +0900 :INFO: Processing by TasksController#create as HTML
+2020-03-02 08:30:41 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"4xckFI78CBgIl2/DhBn7e/5fFGRy8uCOygc8f2YFODkck14/7cVaCkP4yEcmCO17NDyFKkoSxxiJh3po0zqibw==", "task"=>{"name"=>"会社をやめる", "description"=>"会社をやめる"}, "commit"=>"登録する"}
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[36mTask Create (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "会社をやめる"], ["description", "会社をやめる"], ["created_at", "2020-03-01 23:30:41.155101"], ["updated_at", "2020-03-01 23:30:41.155101"], ["user_id", 8]]
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:30:41 +0900 :INFO:   Rendering task_mailer/creation_email.html.slim within layouts/mailer
+2020-03-02 08:30:41 +0900 :INFO:   Rendered task_mailer/creation_email.html.slim within layouts/mailer (11.6ms)
+2020-03-02 08:30:41 +0900 :INFO:   Rendering task_mailer/creation_email.text.slim within layouts/mailer
+2020-03-02 08:30:41 +0900 :INFO:   Rendered task_mailer/creation_email.text.slim within layouts/mailer (2.6ms)
+2020-03-02 08:30:41 +0900 :DEBUG: TaskMailer#creation_email: processed outbound mail in 113.5ms
+2020-03-02 08:30:41 +0900 :INFO: Sent mail to user@example.com (9.0ms)
+2020-03-02 08:30:41 +0900 :DEBUG: Date: Mon, 02 Mar 2020 08:30:41 +0900
+From: taskleaf@example.com
+To: user@example.com
+Message-ID: <5e5c45a1870d3_b60d3fdfe890079c51755@matsumotokaishinoMacBook-Air.local.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5c45a1852c0_b60d3fdfe890079c51629";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5c45a1852c0_b60d3fdfe890079c51629
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7A65Lya56S+44KS44KE44KB44KLDQroqbPjgZfjgYToqqzmmI46DQrkvJrn
+pL7jgpLjgoTjgoHjgos=
+
+----==_mimepart_5e5c45a1852c0_b60d3fdfe890079c51629
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7A65Lya56S+44KS
+44KE44KB44KLPC9saT48bGk+6Kmz44GX44GE6Kqs5piOOjxwPuS8muekvuOC
+kuOChOOCgeOCizwvcD48L2xpPjwvdWw+PC9ib2R5PjwvaHRtbD4=
+
+----==_mimepart_5e5c45a1852c0_b60d3fdfe890079c51629--
+
+2020-03-02 08:30:41 +0900 :INFO: Enqueued SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) to Sidekiq(default)
+2020-03-02 08:30:41 +0900 :DEBUG: task: {"id"=>117, "name"=>"会社をやめる", "description"=>"会社をやめる", "created_at"=>Mon, 02 Mar 2020 08:30:41 JST +09:00, "updated_at"=>Mon, 02 Mar 2020 08:30:41 JST +09:00, "user_id"=>8}
+2020-03-02 08:30:41 +0900 :INFO: Redirected to http://localhost:3000/tasks/117
+2020-03-02 08:30:41 +0900 :INFO: Completed 302 Found in 424ms (ActiveRecord: 2.9ms)
+
+
+2020-03-02 08:30:41 +0900 :INFO: Started GET "/tasks/117" for ::1 at 2020-03-02 08:30:41 +0900
+2020-03-02 08:30:41 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-02 08:30:41 +0900 :INFO:   Parameters: {"id"=>"117"}
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 117], ["LIMIT", 1]]
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-02 08:30:41 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-02 08:30:41 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 117], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-02 08:30:41 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-02 08:30:41 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (21.2ms)
+2020-03-02 08:30:41 +0900 :INFO: Completed 200 OK in 104ms (Views: 94.9ms | ActiveRecord: 3.4ms)
+
+
+2020-03-02 08:30:41 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:30:41 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 11.97ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:31:12 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:31:12 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 2.71ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:32:01 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:32:01 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 3.76ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:33:57 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:33:57 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 1.73ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+D, [2020-03-02T08:35:11.844333 #46653] DEBUG -- : loggerに出力
+D, [2020-03-02T08:35:16.799143 #46670] DEBUG -- : loggerに出力
+2020-03-02 08:35:24 +0900 :INFO: Started DELETE "/tasks/117" for ::1 at 2020-03-02 08:35:24 +0900
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-02 08:35:24 +0900 :INFO: Processing by TasksController#destroy as HTML
+2020-03-02 08:35:24 +0900 :INFO:   Parameters: {"authenticity_token"=>"4QhPEMQaiyPHF28BKeIGYar7tOM34yzncv2GJF0FBfuhT5Wd39Fr3NAVYMoMxSi36K/ErGwNjLIXoFAC6O8G4Q==", "id"=>"117"}
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 117], ["LIMIT", 1]]
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[36mTask Destroy (3.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 117]]
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:35:24 +0900 :DEBUG:   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+2020-03-02 08:35:24 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:35:25 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 117], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-02 08:35:25 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:35:25 +0900 :INFO: Redirected to http://localhost:3000/tasks
+2020-03-02 08:35:25 +0900 :INFO: Completed 302 Found in 111ms (ActiveRecord: 16.8ms)
+
+
+2020-03-02 08:35:25 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-02 08:35:25 +0900
+2020-03-02 08:35:25 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-02 08:35:25 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:35:25 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:35:25 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-02 08:35:25 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-02 08:35:25 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-02 08:35:25 +0900 :DEBUG:   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 08:35:25 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 08:35:25 +0900 :DEBUG:   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 08:35:25 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 08:35:25 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (183.4ms)
+2020-03-02 08:35:25 +0900 :INFO: Completed 200 OK in 707ms (Views: 699.4ms | ActiveRecord: 2.1ms)
+
+
+2020-03-02 08:35:28 +0900 :INFO: Started GET "/tasks/new" for ::1 at 2020-03-02 08:35:28 +0900
+2020-03-02 08:35:28 +0900 :INFO: Processing by TasksController#new as HTML
+2020-03-02 08:35:28 +0900 :DEBUG:   [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:35:28 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:35:28 +0900 :INFO:   Rendering tasks/new.html.slim within layouts/application
+2020-03-02 08:35:28 +0900 :INFO:   Rendered tasks/_form.html.slim (19.9ms)
+2020-03-02 08:35:28 +0900 :INFO:   Rendered tasks/new.html.slim within layouts/application (25.7ms)
+2020-03-02 08:35:28 +0900 :INFO: Completed 200 OK in 80ms (Views: 67.0ms | ActiveRecord: 5.7ms)
+
+
+2020-03-02 08:35:41 +0900 :INFO: Started POST "/tasks" for ::1 at 2020-03-02 08:35:41 +0900
+2020-03-02 08:35:41 +0900 :INFO: Processing by TasksController#create as HTML
+2020-03-02 08:35:41 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"lBiNyqgPiCYcDfaZtsD6t6yBV8X0Fjlnjir3ASUlPylrnPfhyzbaNFdiUR0U0ey3ZuLGi8z2HvHNqrEWkBqlfw==", "task"=>{"name"=>"会社をやめる", "description"=>"会社をやめる"}, "commit"=>"登録する"}
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[36mTask Create (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "会社をやめる"], ["description", "会社をやめる"], ["created_at", "2020-03-01 23:35:41.147149"], ["updated_at", "2020-03-01 23:35:41.147149"], ["user_id", 8]]
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:35:41 +0900 :INFO:   Rendering task_mailer/creation_email.html.slim within layouts/mailer
+2020-03-02 08:35:41 +0900 :INFO:   Rendered task_mailer/creation_email.html.slim within layouts/mailer (8.3ms)
+2020-03-02 08:35:41 +0900 :INFO:   Rendering task_mailer/creation_email.text.slim within layouts/mailer
+2020-03-02 08:35:41 +0900 :INFO:   Rendered task_mailer/creation_email.text.slim within layouts/mailer (2.5ms)
+2020-03-02 08:35:41 +0900 :DEBUG: TaskMailer#creation_email: processed outbound mail in 68.8ms
+2020-03-02 08:35:41 +0900 :INFO: Sent mail to user@example.com (8.5ms)
+2020-03-02 08:35:41 +0900 :DEBUG: Date: Mon, 02 Mar 2020 08:35:41 +0900
+From: taskleaf@example.com
+To: user@example.com
+Message-ID: <5e5c46cd73040_b64e3fe4a6fee5144959a@matsumotokaishinoMacBook-Air.local.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5c46cd715de_b64e3fe4a6fee514494dd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5c46cd715de_b64e3fe4a6fee514494dd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7A65Lya56S+44KS44KE44KB44KLDQroqbPjgZfjgYToqqzmmI46DQrkvJrn
+pL7jgpLjgoTjgoHjgos=
+
+----==_mimepart_5e5c46cd715de_b64e3fe4a6fee514494dd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7A65Lya56S+44KS
+44KE44KB44KLPC9saT48bGk+6Kmz44GX44GE6Kqs5piOOjxwPuS8muekvuOC
+kuOChOOCgeOCizwvcD48L2xpPjwvdWw+PC9ib2R5PjwvaHRtbD4=
+
+----==_mimepart_5e5c46cd715de_b64e3fe4a6fee514494dd--
+
+2020-03-02 08:35:41 +0900 :DEBUG: task: {"id"=>118, "name"=>"会社をやめる", "description"=>"会社をやめる", "created_at"=>Mon, 02 Mar 2020 08:35:41 JST +09:00, "updated_at"=>Mon, 02 Mar 2020 08:35:41 JST +09:00, "user_id"=>8}
+2020-03-02 08:35:41 +0900 :INFO: Enqueued SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) to Sidekiq(default)
+2020-03-02 08:35:41 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:35:41 +0900 :INFO: Redirected to http://localhost:3000/tasks/118
+2020-03-02 08:35:41 +0900 :INFO: Completed 302 Found in 343ms (ActiveRecord: 4.2ms)
+
+
+2020-03-02 08:35:41 +0900 :ERROR: Error performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 2.97ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:35:41 +0900 :INFO: Started GET "/tasks/118" for ::1 at 2020-03-02 08:35:41 +0900
+2020-03-02 08:35:41 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-02 08:35:41 +0900 :INFO:   Parameters: {"id"=>"118"}
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 118], ["LIMIT", 1]]
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-02 08:35:41 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-02 08:35:41 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 118], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-02 08:35:41 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-02 08:35:41 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (10.6ms)
+2020-03-02 08:35:41 +0900 :INFO: Completed 200 OK in 68ms (Views: 61.1ms | ActiveRecord: 1.3ms)
+
+
+2020-03-02 08:36:02 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:36:02 +0900 :ERROR: Error performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 3.01ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:36:20 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:36:20 +0900 :ERROR: Error performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 3.79ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:36:54 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:36:54 +0900 :ERROR: Error performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 4.35ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:37:15 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:37:15 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 2.09ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:39:14 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:39:14 +0900 :ERROR: Error performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 4.51ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+2020-03-02 08:44:11 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:44:11 +0900 :ERROR: Error performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 3.55ms: NameError (uninitialized constant Sidekiq::Logging):
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+/Users/matsumotokaishi/taskleaf/app/jobs/sample_job.rb:5:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:39:in `block in perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/i18n-1.7.0/lib/i18n.rb:297:in `with_locale'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `block in instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/notifications.rb:168:in `instrument'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:48:in `tag_logger'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:38:in `perform_now'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:24:in `block in execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:83:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `instance_exec'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/execution.rb:22:in `execute'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activejob-5.2.4.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:196:in `execute_job'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:163:in `block in process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:111:in `local'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:43:in `block in call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:73:in `block in wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/activesupport-5.2.4.1/lib/active_support/reloader.rb:72:in `wrap'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/rails.rb:42:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:257:in `stats'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:13:in `call'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_retry.rb:78:in `global'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/logger.rb:10:in `with'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/job_logger.rb:33:in `prepare'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:123:in `dispatch'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:162:in `process'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:78:in `process_one'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/processor.rb:68:in `run'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:15:in `watchdog'
+/Users/matsumotokaishi/taskleaf/vendor/bundle/ruby/2.6.0/gems/sidekiq-6.0.5/lib/sidekiq/util.rb:24:in `block in safe_thread'
+D, [2020-03-02T08:46:22.673205 #46776] DEBUG -- : loggerに出力
+D, [2020-03-02T08:46:37.901941 #46811] DEBUG -- : loggerに出力
+D, [2020-03-02T08:46:48.991660 #46826] DEBUG -- : loggerに出力
+2020-03-02 08:46:51 +0900 :INFO: Performing SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default)
+2020-03-02 08:46:51 +0900 :INFO: Performed SampleJob (Job ID: f64f2e90-d2a3-49e1-98a5-a5c4ed9105d6) from Sidekiq(default) in 24.93ms
+2020-03-02 08:46:57 +0900 :INFO: Started DELETE "/tasks/118" for ::1 at 2020-03-02 08:46:57 +0900
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+2020-03-02 08:46:57 +0900 :INFO: Processing by TasksController#destroy as HTML
+2020-03-02 08:46:57 +0900 :INFO:   Parameters: {"authenticity_token"=>"dYrF2Pe+RL06kTRKwC3YmlZ6+Ddh143fVZG+HD/SNJs1zR9V7HWkQi2TO4HlCvZMFC6IeDo5LYowzGg6ijg3gQ==", "id"=>"118"}
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 118], ["LIMIT", 1]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mTask Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 118]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 118], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:34
+2020-03-02 08:46:57 +0900 :INFO: Redirected to http://localhost:3000/tasks
+2020-03-02 08:46:57 +0900 :INFO: Completed 302 Found in 107ms (ActiveRecord: 16.1ms)
+
+
+2020-03-02 08:46:57 +0900 :INFO: Started GET "/tasks" for ::1 at 2020-03-02 08:46:57 +0900
+2020-03-02 08:46:57 +0900 :INFO: Processing by TasksController#index as HTML
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:46:57 +0900 :INFO:   Rendering tasks/index.html.slim within layouts/application
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "tasks"."id") FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 8]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:18
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  DISTINCT "tasks"."id" AS count_column FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 08:46:57 +0900 :DEBUG:   [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  DISTINCT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 8], ["LIMIT", 25], ["OFFSET", 0]]
+2020-03-02 08:46:57 +0900 :DEBUG:   ↳ app/views/tasks/index.html.slim:19
+2020-03-02 08:46:57 +0900 :INFO:   Rendered tasks/index.html.slim within layouts/application (155.4ms)
+2020-03-02 08:46:58 +0900 :INFO: Completed 200 OK in 686ms (Views: 674.4ms | ActiveRecord: 2.9ms)
+
+
+2020-03-02 08:47:00 +0900 :INFO: Started GET "/tasks/new" for ::1 at 2020-03-02 08:47:00 +0900
+2020-03-02 08:47:00 +0900 :INFO: Processing by TasksController#new as HTML
+2020-03-02 08:47:00 +0900 :DEBUG:   [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:47:00 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:47:00 +0900 :INFO:   Rendering tasks/new.html.slim within layouts/application
+2020-03-02 08:47:00 +0900 :INFO:   Rendered tasks/_form.html.slim (15.7ms)
+2020-03-02 08:47:00 +0900 :INFO:   Rendered tasks/new.html.slim within layouts/application (23.0ms)
+2020-03-02 08:47:00 +0900 :INFO: Completed 200 OK in 81ms (Views: 68.4ms | ActiveRecord: 3.4ms)
+
+
+2020-03-02 08:47:17 +0900 :INFO: Started POST "/tasks" for ::1 at 2020-03-02 08:47:17 +0900
+2020-03-02 08:47:17 +0900 :INFO: Processing by TasksController#create as HTML
+2020-03-02 08:47:17 +0900 :INFO:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"GSFioLwR61RBMNLpy/xAx4GnEqmnOUXfyYbUM4uftD7mpRiL3yi5RgpfdW1p7VbHS8SD55/ZYkmKBpIkPqAuaA==", "task"=>{"name"=>"会社をやめる", "description"=>"quit my current job"}, "commit"=>"登録する"}
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[36mTask Create (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "会社をやめる"], ["description", "quit my current job"], ["created_at", "2020-03-01 23:47:17.016566"], ["updated_at", "2020-03-01 23:47:17.016566"], ["user_id", 8]]
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:46
+2020-03-02 08:47:17 +0900 :INFO:   Rendering task_mailer/creation_email.html.slim within layouts/mailer
+2020-03-02 08:47:17 +0900 :INFO:   Rendered task_mailer/creation_email.html.slim within layouts/mailer (3.5ms)
+2020-03-02 08:47:17 +0900 :INFO:   Rendering task_mailer/creation_email.text.slim within layouts/mailer
+2020-03-02 08:47:17 +0900 :INFO:   Rendered task_mailer/creation_email.text.slim within layouts/mailer (2.3ms)
+2020-03-02 08:47:17 +0900 :DEBUG: TaskMailer#creation_email: processed outbound mail in 69.1ms
+2020-03-02 08:47:17 +0900 :INFO: Sent mail to user@example.com (8.5ms)
+2020-03-02 08:47:17 +0900 :DEBUG: Date: Mon, 02 Mar 2020 08:47:17 +0900
+From: taskleaf@example.com
+To: user@example.com
+Message-ID: <5e5c49855954f_b6ea3fcee2b0a20c4307a@matsumotokaishinoMacBook-Air.local.mail>
+Subject: =?UTF-8?Q?=E3=82=BF=E3=82=B9=E3=82=AF=E4=BD=9C=E6=88=90=E5=AE=8C=E4=BA=86=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5c498557b61_b6ea3fcee2b0a20c429fc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5c498557b61_b6ea3fcee2b0a20c429fc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+5Lul5LiL44Gu44K/44K544Kv44KS5L2c5oiQ44GX44G+44GX44GfDQrlkI3n
+p7A65Lya56S+44KS44KE44KB44KLDQroqbPjgZfjgYToqqzmmI46DQpxdWl0
+IG15IGN1cnJlbnQgam9i
+
+----==_mimepart_5e5c498557b61_b6ea3fcee2b0a20c429fc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PG1ldGEgY29udGVudD0idGV4
+dC9odG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PSJDb250ZW50LVR5
+cGUiIC8+PHN0eWxlPiAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0byBiZSBpbmxp
+bmUgKi8gPC9zdHlsZT48L2hlYWQ+PGJvZHk+5Lul5LiL44Gu44K/44K544Kv
+44KS5L2c5oiQ44GX44G+44GX44GfPHVsPjxsaT7lkI3np7A65Lya56S+44KS
+44KE44KB44KLPC9saT48bGk+6Kmz44GX44GE6Kqs5piOOjxwPnF1aXQgbXkg
+Y3VycmVudCBqb2I8L3A+PC9saT48L3VsPjwvYm9keT48L2h0bWw+
+
+----==_mimepart_5e5c498557b61_b6ea3fcee2b0a20c429fc--
+
+2020-03-02 08:47:17 +0900 :DEBUG: task: {"id"=>119, "name"=>"会社をやめる", "description"=>"quit my current job", "created_at"=>Mon, 02 Mar 2020 08:47:17 JST +09:00, "updated_at"=>Mon, 02 Mar 2020 08:47:17 JST +09:00, "user_id"=>8}
+2020-03-02 08:47:17 +0900 :INFO: Enqueued SampleJob (Job ID: 3d49188b-597e-431e-9f2a-584a1fc577c8) to Sidekiq(default)
+2020-03-02 08:47:17 +0900 :INFO: Performing SampleJob (Job ID: 3d49188b-597e-431e-9f2a-584a1fc577c8) from Sidekiq(default)
+2020-03-02 08:47:17 +0900 :INFO: Redirected to http://localhost:3000/tasks/119
+2020-03-02 08:47:17 +0900 :INFO: Performed SampleJob (Job ID: 3d49188b-597e-431e-9f2a-584a1fc577c8) from Sidekiq(default) in 0.09ms
+2020-03-02 08:47:17 +0900 :INFO: Completed 302 Found in 365ms (ActiveRecord: 2.0ms)
+
+
+2020-03-02 08:47:17 +0900 :INFO: Started GET "/tasks/119" for ::1 at 2020-03-02 08:47:17 +0900
+2020-03-02 08:47:17 +0900 :INFO: Processing by TasksController#show as HTML
+2020-03-02 08:47:17 +0900 :INFO:   Parameters: {"id"=>"119"}
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/application_controller.rb:8
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1 AND "tasks"."id" = $2 LIMIT $3[0m  [["user_id", 8], ["id", 119], ["LIMIT", 1]]
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/controllers/tasks_controller.rb:74
+2020-03-02 08:47:17 +0900 :INFO:   Rendering tasks/show.html.slim within layouts/application
+2020-03-02 08:47:17 +0900 :DEBUG:   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 119], ["record_type", "Task"], ["name", "image"], ["LIMIT", 1]]
+2020-03-02 08:47:17 +0900 :DEBUG:   ↳ app/views/tasks/show.html.slim:18
+2020-03-02 08:47:17 +0900 :INFO:   Rendered tasks/show.html.slim within layouts/application (10.6ms)
+2020-03-02 08:47:17 +0900 :INFO: Completed 200 OK in 84ms (Views: 76.9ms | ActiveRecord: 1.3ms)
+
+
+2020-03-02 08:55:55 +0900 :INFO: Performing SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default)
+2020-03-02 08:55:55 +0900 :INFO: Performed SampleJob (Job ID: 72caa60a-41c1-4919-8672-8ec6145aac0d) from Sidekiq(default) in 0.19ms
