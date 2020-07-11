@@ -1,7 +1,0 @@
-# Logfile created on 2020-02-20 07:18:04 +0900 by logger.rb/66358
-D, [2020-02-20T07:18:04.587575 #3497] DEBUG -- : custom_loggerに出力
-D, [2020-02-20T22:40:16.948420 #3716] DEBUG -- : custom_loggerに出力
-D, [2020-02-22T22:10:23.308322 #21825] DEBUG -- : custom_loggerに出力
-D, [2020-02-22T22:13:09.486757 #21872] DEBUG -- : custom_loggerに出力
-D, [2020-02-22T22:21:14.856494 #21944] DEBUG -- : custom_loggerに出力
-D, [2020-02-22T22:21:16.581991 #21959] DEBUG -- : custom_loggerに出力
